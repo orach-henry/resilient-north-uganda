@@ -1,186 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resilient North Uganda</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      margin: 0;
-      background-color: #f0f4f8;
-      color: #2D3748;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resilient North Uganda</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background: #f7fafc;
+        color: #2d3748;
+      }
+      header {
+        background: #22543d;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      header img {
+        height: 80px;
+      }
+      nav {
+        background: #2f855a;
+        text-align: center;
+        padding: 10px;
+      }
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      section {
+        max-width: 900px;
+        margin: auto;
+        padding: 30px 15px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      footer {
+        background: #2f855a;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+      h1, h2, h3 {
+        color: #22543d;
+      }
+      .contact input,
+      .contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .contact button {
+        background: #2f855a;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Resilient North Uganda Logo" />
+      <h1>Resilient North Uganda</h1>
+      <p>Rooted in Resilience, Growing for the Future</p>
+    </header>
 
-    h1, h2 {
-      color: #22543D;
-    }
+    <nav>
+      <a href="#about">About</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    .btn {
-      background-color: #2F855A;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
-    }
+    <section id="about">
+      <h2>About Our NGO</h2>
+      <p>
+        We are committed to rural transformation in Northern Uganda through improved agriculture,
+        diversified livelihoods, and access to rural credit.
+      </p>
+    </section>
 
-    .card {
-      border: 1px solid #E2E8F0;
-      border-radius: 10px;
-      padding: 16px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      margin-bottom: 16px;
-      background: white;
-    }
+    <section id="founder">
+      <h2>Meet Our Founder</h2>
+      <p>
+        <strong>Henry Orach – PhD Scholar in Rural and Regional Development<br />
+        Sichuan Agricultural University | Uganda</strong>
+      </p>
+      <p>
+        Henry Orach is a dedicated scholar and rural development advocate pursuing his PhD in Rural
+        and Regional Development at Sichuan Agricultural University, China. Originally from
+        Namokora, a small village in northern Uganda, Henry’s life journey has been shaped by deep
+        firsthand experiences of the challenges faced by rural farming communities.
+      </p>
+      <p>
+        Driven by both passion and purpose, Henry earned a bachelor's degree in economics through a
+        scholarship program and later completed a master's in regional economics. His research
+        explores the intersections of agricultural productivity, income diversification, access to
+        credit, and infrastructure development, with a focus on post-conflict northern Uganda.
+      </p>
+      <p>
+        He believes that success in development is best measured by visible improvements in people's
+        lives: food security, health outcomes, better roads, rising income, and financial access.
+      </p>
+    </section>
 
-    .tab-buttons button {
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      margin: 5px;
-    }
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:orachhenry0@gmail.com">orachhenry0@gmail.com</a></p>
+      <p>Phone: +256 775 591 051</p>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
-    .progress-bar {
-      background: #EDF2F7;
-      border-radius: 8px;
-      height: 20px;
-      width: 100%;
-    }
-
-    .progress-fill {
-      background: #48BB78;
-      height: 100%;
-      width: 65%;
-      border-radius: 8px;
-    }
-
-    input {
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #CBD5E0;
-      width: 100%;
-      margin-bottom: 8px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    .two-cols {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .partners img {
-      height: 48px;
-      object-fit: contain;
-    }
-
-    .social a {
-      text-decoration: none;
-      color: #2F855A;
-      margin: 0 10px;
-    }
-
-    .lang {
-      text-align: right;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 40px;
-      background: linear-gradient(to right, #FED7AA, #C6F6D5);
-      border-radius: 20px;
-      margin-bottom: 30px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="lang">
-    <span>EN</span> <span>FR</span> <span>DE</span> <span>中文</span>
-  </div>
-
-  <section class="hero">
-    <h1>ResilientNorthUganda.org</h1>
-    <p>Rooted in resilience, growing for the future.</p>
-    <button class="btn">Donate Now</button>
-  </section>
-
-  <div class="grid two-cols">
-    <div class="card">
-      <h2>Our Mission</h2>
-      <p>To empower rural communities in Northern Uganda through sustainable agriculture, inclusive livelihoods, and financial resilience.</p>
-    </div>
-    <div class="card">
-      <h2>Our Vision</h2>
-      <p>A hunger-free, self-reliant Northern Uganda where communities thrive despite climate and economic challenges.</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Our Projects</h2>
-    <ul>
-      <li>Seeds of Change – Improving crop varieties for resilience</li>
-      <li>Pathways to Prosperity – Creating off-farm jobs</li>
-      <li>Piggery Initiative – Diversifying incomes</li>
-      <li>Village Savings & Loans – Access to microcredit</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Community Blog</h2>
-    <ul>
-      <li>How VSLA Changed My Life</li>
-      <li>Youth-led Agro-Innovation Wins Regional Award</li>
-      <li>Combating Drought with Improved Maize Varieties</li>
-      <li>Building a Women's Cooperative Through Savings</li>
-      <li>Meet the Youth Driving Rural Tech Innovation</li>
-      <li>From Borrower to Entrepreneur: A VSLA Journey</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Our Impact in Numbers</h2>
-    <p>2025 Goal: $100,000 To Be Raised — Current: $1,000</p>
-    <div class="progress-bar">
-      <div class="progress-fill"></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Our Partners</h2>
-    <div class="grid two-cols partners">
-      <img src="logos/usaid.png" alt="USAID"/>
-      <img src="logos/gates.png" alt="Gates Foundation"/>
-      <img src="logos/mastercard.png" alt="Mastercard Foundation"/>
-      <img src="logos/ifad.png" alt="IFAD"/>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Contact Us</h2>
-    <p>We'd love to hear from you. Reach out with questions, collaborations, or ideas.</p>
-    <p>Email: <a href="mailto:orachhenry0@gmail.com">orachhenry0@gmail.com</a></p>
-    <input type="text" placeholder="Your Name"/>
-    <input type="email" placeholder="Your Email"/>
-    <input type="text" placeholder="Your Message"/>
-    <button class="btn">Send Message</button>
-  </div>
-
-  <div class="card" style="text-align: center;">
-    <h2>Follow Us</h2>
-    <div class="social">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-    </div>
-  </div>
-
-</body>
+    <footer>
+      <p>&copy; 2025 Resilient North Uganda. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
