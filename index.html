@@ -1,184 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Resilient North Uganda</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #fcf6dd;
-        color: #1a202c;
-      }
-      header {
-        background: #f6c957;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      header img {
-        height: 80px;
-      }
-      header h1 {
-        margin: 0;
-        font-size: 2rem;
-        color: #22543d;
-      }
-      header p {
-        font-size: 1rem;
-        color: #744210;
-      }
-      .header-text {
-        flex-grow: 1;
-        padding-left: 20px;
-      }
-      nav {
-        background: #2f855a;
-        text-align: center;
-        padding: 10px;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 20px;
-        font-weight: bold;
-      }
-      section {
-        max-width: 1000px;
-        margin: 20px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      }
-      h2 {
-        color: #22543d;
-      }
-      .mission {
-        background: #fefcbf;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-      }
-      .highlight {
-        background: #edf2f7;
-        padding: 15px;
-        border-left: 5px solid #2f855a;
-        margin-bottom: 20px;
-        border-radius: 5px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-      .contact input,
-      .contact textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      .contact button {
-        background: #2f855a;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .donate {
-        background-color: #2f855a;
-        color: white;
-        padding: 10px 18px;
-        border-radius: 8px;
-        border: none;
-        font-weight: bold;
-        text-decoration: none;
-      }
-      footer {
-        background: #2f855a;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 20px;
-      }
-      @media (max-width: 768px) {
-        .grid {
-          grid-template-columns: 1fr;
-        }
-        header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <img src="resilient_north_uganda_logo.png" alt="Resilient North Uganda Logo" />
-      <div class="header-text">
-        <h1>Resilient North Uganda</h1>
-        <p>Rooted in Resilience. Growing for the Future</p>
-      </div>
-      <a class="donate" href="#contact">Donate Now</a>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resilient North Uganda</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7fafc; color: #2d3748; }
+    header { background: #22543d; color: white; text-align: center; padding: 30px 20px; }
+    header img { height: 100px; display: block; margin: auto; }
+    nav { background: #2f855a; padding: 12px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { max-width: 900px; margin: 30px auto; padding: 30px 15px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1,h2,h3 { color: #22543d; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px; }
+    .card { background: #edf2f7; padding: 15px; border-radius: 8px; }
+    .donate-section { text-align: center; background: #f0fff4; padding: 30px; border-radius: 10px; margin-top: 20px; }
+    .donate-section h2 { color: #22543d; }
+    .contact input, .contact textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    .contact button { background: #2f855a; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    footer { background: #2f855a; color: white; text-align: center; padding: 15px; margin-top: 20px; }
+  </style>
+</head>
+<body>
 
-    <nav>
-      <a href="#about">About Our NGO</a>
-      <a href="#founder">Founder</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header>
+    <img src="resilient_north_uganda_logo.png" alt="Resilient North Uganda Logo" />
+    <h1>Resilient North Uganda</h1>
+    <p>Rooted in Resilience, Growing for the Future</p>
+  </header>
 
-    <section id="about">
-      <h2>About Our NGO</h2>
-      <div class="highlight">
-        <strong>Mission:</strong><br>
-        To empower rural communities in Northern Uganda through sustainable agriculture, inclusive livelihoods, and financial resilience.
-      </div>
-      <div class="highlight">
-        <strong>Vision:</strong><br>
-        A hunger-free, self-reliant <strong>Northern Uganda</strong> where communities thrive despite climate and economic challenges.
-      </div>
-    </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#donate">Donate</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="founder">
-      <h2>Meet Our Founder</h2>
-      <p><strong>Henry Orach</strong> – PhD Scholar in Rural and Regional Development<br>
-      Sichuan Agricultural University | Uganda</p>
-      <p>
-        Henry Orach is a dedicated scholar in Rural and Regional Development pursuing his PhD in regional economic transformation through a scholarship program. 
-        His research focuses on identifying the key growth drivers for rural prosperity: improved agriculture, income diversification, access to credit, and 
-        infrastructure development—especially in the post-conflict context of Northern Uganda.
-      </p>
-      <p>
-        He believes success is seen in real outcomes: more food on the table, better health, stronger roads, and access to financial services.
-      </p>
-    </section>
+  <section id="about">
+    <h2>Our Vision</h2>
+    <p><strong>A hunger-free, self-reliant Northern Uganda where communities thrive despite climate and economic challenges.</strong></p>
+    
+    <h2>Our Mission</h2>
+    <p><strong>To empower rural communities in Northern Uganda through sustainable agriculture, inclusive livelihoods, and financial resilience.</strong></p>
+  </section>
 
-    <section id="contact" class="grid">
-      <div>
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:orachhenry0@gmail.com">orachhenry0@gmail.com</a></p>
-        <p><strong>Phone:</strong> +256 775 531 051</p>
+  <section id="projects">
+    <h2>Our Project Portfolio</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Seeds of Change</h3>
+        <p>Improving crop varieties for climate resilience and food security.</p>
       </div>
-      <div>
-        <form class="contact">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+      <div class="card">
+        <h3>Pathways to Prosperity</h3>
+        <p>Creating off-farm employment and boosting household incomes.</p>
       </div>
-    </section>
+      <div class="card">
+        <h3>Piggery Initiative</h3>
+        <p>Supporting small-scale piggery enterprises to diversify income.</p>
+      </div>
+      <div class="card">
+        <h3>Village Savings & Loans (VSLA)</h3>
+        <p>Expanding access to credit through community-based savings groups.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      &copy; 2025 Resilient North Uganda. All rights reserved.
-    </footer>
-  </body>
+  <section id="donate" class="donate-section">
+    <h2>Support Our Work</h2>
+    <p>Your donation empowers communities in Northern Uganda.</p>
+
+    <!-- PayPal Donate Button -->
+    <div id="paypal-donate-button-container"></div>
+    <script 
+      src="https://www.paypal.com/sdk/js?client-id=BAAijDf_gFdx6spgZNWPssuaSaAaduE15jIqwVUdyVNOG1tuqcDPEWl-pSBlDk5tkZEr8uvMOtNVGR1-gY&components=hosted-buttons&disable-funding=venmo&currency=USD">
+    </script>
+    <div id="paypal-container"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "YOUR_BUTTON_ID_HERE"
+      }).render("#paypal-container");
+    </script>
+
+    <p style="margin-top:20px;">
+      <strong>Donate via Mobile Money (Uganda):</strong><br>
+      MTN & Airtel: <strong>+256763916330</strong>
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:orachhenry0@gmail.com">orachhenry0@gmail.com</a></p>
+    <p>Phone: +256 775 591 051</p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Resilient North Uganda. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
