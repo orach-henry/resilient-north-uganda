@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resilient North Uganda</title>
-
-  <!-- PayPal SDK Script (Part 1) -->
-  <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAAijDf_gFdx6spgZNWPssuaSaAaduE15jIqwVUdyVNOG1tuqcDPEWl-pSBlDk5tkZEr8uvMOtNVGR1-gY&components=hosted-buttons&disable-funding=venmo&currency=USD">
-  </script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resilient North Uganda - Donate & Support</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
       background: #f7fafc;
       color: #2d3748;
     }
     header {
       background: #22543d;
       color: white;
+      padding: 20px 0;
       text-align: center;
-      padding: 20px;
     }
     header img {
-      height: 80px;
+      height: 100px;
     }
     nav {
       background: #2f855a;
@@ -44,7 +39,7 @@
       padding: 30px 15px;
       background: white;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
     }
     footer {
@@ -53,10 +48,11 @@
       text-align: center;
       padding: 15px;
     }
-    h1,h2,h3 {
+    h1, h2, h3 {
       color: #22543d;
     }
-    .contact input, .contact textarea {
+    .contact input,
+    .contact textarea {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
@@ -73,24 +69,27 @@
     }
     .donate-section {
       text-align: center;
-      background: #c6f6d5;
       padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
     }
-    .donate-section h2 {
-      color: #22543d;
-    }
-    .mobile-money {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #2f855a;
+    .donate-section input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 150px;
+      margin-bottom: 10px;
+      text-align: center;
     }
   </style>
+
+  <!-- PayPal SDK (Part 1) -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAijDf_gFdx6spgZNWPssuaSaAaduE15jIqwVUdyVNOG1tuqcDPEWl-pSBlDk5tkZEr8uvMOtNVGR1-gY&components=hosted-buttons&disable-funding=venmo&currency=USD">
+  </script>
 </head>
+
 <body>
   <header>
-    <img src="resilient_north_uganda_logo.png" alt="Resilient North Uganda Logo">
+    <img src="resilient_north_uganda_logo.png" alt="Resilient North Uganda Logo" />
     <h1>Resilient North Uganda</h1>
     <p>Rooted in Resilience, Growing for the Future</p>
   </header>
@@ -105,50 +104,47 @@
   <section id="about">
     <h2>About Our NGO</h2>
     <p>
-      Resilient North Uganda is dedicated to rural transformation in Northern Uganda through 
-      climate-resilient agriculture, diversified livelihoods, and access to rural credit.
+      Resilient North Uganda is committed to rural transformation in Northern Uganda through
+      climate-smart agriculture, diversified livelihoods, and community savings initiatives.
     </p>
   </section>
 
   <section id="mission">
     <h2>Our Mission & Vision</h2>
-    <p><strong>Mission:</strong> To empower rural communities in Northern Uganda through sustainable agriculture, inclusive livelihoods, and financial resilience.</p>
-    <p><strong>Vision:</strong> A hunger-free, self-reliant Northern Uganda where communities thrive despite climate and economic challenges.</p>
+    <p><strong>Mission:</strong> To empower rural communities in Northern Uganda through sustainable
+       agriculture, inclusive livelihoods, and financial resilience.</p>
+    <p><strong>Vision:</strong> A hunger-free, self-reliant Northern Uganda where communities
+       thrive despite climate and economic challenges.</p>
   </section>
 
   <section id="donate" class="donate-section">
     <h2>Support Our Work</h2>
-    <p>Your contribution helps us empower rural communities in Northern Uganda.</p>
+    <p>
+      Support climate-resilient agriculture, rural livelihoods, and community empowerment in
+      Northern Uganda.
+    </p>
+    
+    <!-- Mobile Money Info -->
+    <p><strong>Donate via Mobile Money (MTN/Airtel Uganda):</strong><br>
+    <span style="font-size:18px; color:#2f855a;">+256 763 916 330</span></p>
 
-    <!-- PayPal Donate Button (Part 2) -->
+    <!-- PayPal Button (Part 2) -->
     <div id="paypal-container-MFXMSEXWXJG8J"></div>
     <script>
       paypal.HostedButtons({
         hostedButtonId: "MFXMSEXWXJG8J",
       }).render("#paypal-container-MFXMSEXWXJG8J")
     </script>
-
-    <!-- Mobile Money Option -->
-    <p class="mobile-money">
-      Or Donate via Mobile Money: <br>
-      <strong>+256 763 916 330</strong>
-    </p>
   </section>
 
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:orachhenry0@gmail.com">orachhenry0@gmail.com</a></p>
-    <p>Phone: +256 775 591 051</p>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <p>Email: <a href="mailto:resilientnorthuganda@gmail.com">resilientnorthuganda@gmail.com</a></p>
+    <p>Phone: +256 763 916 330</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Resilient North Uganda. All Rights Reserved.</p>
+    <p>&copy; 2025 Resilient North Uganda. All rights reserved.</p>
   </footer>
 </body>
 </html>
