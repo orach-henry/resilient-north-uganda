@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resilient North Uganda</title>
-  <link rel="icon" href="logo.png">
-  
-  <!-- PayPal SDK -->
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- PayPal Hosted Buttons -->
   <script 
     src="https://www.paypal.com/sdk/js?client-id=BAAijDf_gFdx6spgZNWPssuaSaAaduE15jIqwVUdyVNOG1tuqcDPEWl-pSBlDk5tkZEr8uvMOtNVGR1-gY&components=hosted-buttons&disable-funding=venmo&currency=USD">
   </script>
@@ -20,82 +23,153 @@
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f7fafc; color: #2d3748; }
-    header { background: #22543d; color: white; padding: 20px 0; text-align: center; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7fafc;
+      color: #2d3748;
+    }
+    header {
+      background: #22543d;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
     header img { height: 80px; }
-    nav { background: #2f855a; text-align: center; padding: 10px; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    .hero { position: relative; text-align: center; }
-    .hero img { width: 100%; height: auto; }
-    .hero h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; }
-    section { max-width: 1000px; margin: auto; padding: 30px 15px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    nav {
+      background: #2f855a;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white; margin: 0 15px; text-decoration: none; font-weight: bold;
+    }
+    .hero {
+      position: relative;
+      text-align: center;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      max-height: 450px;
+      object-fit: cover;
+    }
+    .hero h1 {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 2rem;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
     h2 { color: #22543d; }
-    .donate-options img { max-height: 180px; margin: 10px; }
-    .story-gallery img { width: 30%; margin: 1%; border-radius: 10px; }
-    footer { background: #2f855a; color: white; text-align: center; padding: 15px; margin-top: 20px; }
-    .donate-btn { background: #ffcc00; color: #000; padding: 12px 25px; border-radius: 8px; font-weight: bold; animation: pulse 2s infinite; }
-    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1);} 100% {transform: scale(1);} }
+    footer {
+      background: #2f855a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    .donation-options {
+      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px;
+    }
+    .donation-options div { text-align: center; }
+    .donation-options img { width: 150px; margin-top: 10px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Resilient North Uganda Logo" />
+    <img src="logo.png" alt="Resilient North Uganda Logo">
     <h1>Resilient North Uganda</h1>
-    <p>Rooted in Resilience. Growing for the Future</p>
+    <p>Rooted in Resilience, Growing for the Future</p>
     <div id="google_translate_element"></div>
   </header>
-
-  <div class="hero">
-    <img src="hero.jpg" alt="Hero Banner" />
-    <h1>Together for a Hunger-Free, Self-Reliant Northern Uganda</h1>
-  </div>
 
   <nav>
     <a href="#about">About</a>
     <a href="#vision">Vision & Mission</a>
     <a href="#donate">Donate</a>
-    <a href="#stories">Impact Stories</a>
+    <a href="#impact">Impact</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <div class="hero">
+    <img src="hero.jpg" alt="Hero Banner">
+    <h1>Together for a Hunger-Free, Self-Reliant Northern Uganda</h1>
+  </div>
+
   <section id="about">
     <h2>About Our NGO</h2>
-    <p>We empower rural communities in Northern Uganda through climate-resilient agriculture, inclusive livelihoods, and financial resilience.</p>
+    <p>We are committed to rural transformation in Northern Uganda through improved agriculture,
+    diversified livelihoods, and access to rural credit.</p>
   </section>
 
   <section id="vision">
     <h2>Our Vision</h2>
-    <p>A hunger-free, self-reliant Northern Uganda where communities thrive despite climate and economic challenges.</p>
+    <p><strong>A hunger-free, self-reliant Northern Uganda where communities thrive despite climate and economic challenges.</strong></p>
     <h2>Our Mission</h2>
-    <p>To empower rural communities in Northern Uganda through sustainable agriculture, inclusive livelihoods, and financial resilience.</p>
+    <p><strong>To empower rural communities in Northern Uganda through sustainable agriculture, inclusive livelihoods, and financial resilience.</strong></p>
   </section>
 
-  <section id="donate">
-    <h2>Donate Now</h2>
-    <p>Support climate-resilient agriculture, rural livelihoods, and community empowerment in Northern Uganda.</p>
-    <div class="donate-options">
-      <h3>PayPal</h3>
-      <div id="paypal-container-MFXMSEXWXJG8J"></div>
-      <script>
-        paypal.HostedButtons({
-          hostedButtonId: "MFXMSEXWXJG8J",
-        }).render("#paypal-container-MFXMSEXWXJG8J")
-      </script>
+  <section id="donate" style="text-align:center;">
+    <h2>Support Resilient North Uganda</h2>
+    <p>Your donation helps empower rural communities with climate-resilient agriculture and sustainable livelihoods.</p>
 
-      <h3>Mobile Money</h3>
-      <p>Send to: <strong>+256 763 916 330</strong></p>
+    <!-- PayPal Hosted Button -->
+    <div id="paypal-container-MFXMSEXWXJG8J" style="margin:20px auto;"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "MFXMSEXWXJG8J",
+      }).render("#paypal-container-MFXMSEXWXJG8J");
+    </script>
 
-      <h3>WeChat Pay</h3>
-      <img src="wechat.png" alt="WeChat QR Code for Donations">
+    <!-- QR Codes -->
+    <div class="donation-options">
+      <div>
+        <h3>PayPal QR</h3>
+        <img src="paypal-qr.png" alt="PayPal QR">
+      </div>
+      <div>
+        <h3>Mobile Money</h3>
+        <p>MTN / Airtel: <strong>+256 763 916 330</strong></p>
+        <img src="mobilemoney-qr.png" alt="Mobile Money QR">
+      </div>
+      <div>
+        <h3>WeChat Pay</h3>
+        <img src="wechat.png" alt="WeChat QR">
+      </div>
     </div>
   </section>
 
-  <section id="stories">
-    <h2>Impact Stories</h2>
-    <div class="story-gallery">
-      <img src="story1.jpg" alt="Dry Farm">
-      <img src="story2.jpg" alt="Irrigated Farm">
-      <img src="story3.jpg" alt="Community Effort">
+  <section id="impact">
+    <h2>Impact Stories & Photo Gallery</h2>
+    <div class="gallery">
+      <img src="story1.jpg" alt="Story 1">
+      <img src="story2.jpg" alt="Story 2">
+      <img src="story3.jpg" alt="Story 3">
+      <img src="f5981f3f-3af0-4306-9073-e458158c6615.png" alt="Story 4">
+      <img src="bc8e5d12-5f58-421b-ab7d-ce21d5cc06e0.png" alt="Story 5">
     </div>
   </section>
 
@@ -110,3 +184,4 @@
   </footer>
 </body>
 </html>
+
