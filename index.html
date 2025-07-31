@@ -1,141 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resilient North Uganda</title>
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; line-height:1.6; background:#f7fafc; }
-    header { text-align:center; background:#22543d; color:white; padding:30px 10px; }
-    header img { height:80px; }
-    nav { background:#2f855a; text-align:center; padding:12px 0; }
-    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
-
-    /* Hero Section */
-    .hero {
-      background:url('hero.jpg') center/cover no-repeat;
-      height:60vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
-      color:white; text-align:center;
-    }
-    .hero h1 { font-size:3rem; margin-bottom:10px; text-shadow:0 0 10px black; }
-    .hero p { font-size:1.2rem; margin-bottom:20px; }
-    .btn-donate {
-      background:#ffcc00; padding:12px 30px; font-size:1.2rem; border:none; border-radius:5px;
-      cursor:pointer; animation:pulse 2s infinite; text-decoration:none; color:black;
-    }
-    @keyframes pulse {
-      0% {transform: scale(1);}
-      50% {transform: scale(1.1);}
-      100% {transform: scale(1);}
-    }
-
-    section { max-width:1000px; margin:40px auto; padding:20px; background:white;
-      border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-    h2 { color:#22543d; }
-
-    /* Gallery */
-    .gallery { display:flex; overflow-x:auto; gap:10px; }
-    .gallery img { height:200px; border-radius:10px; flex-shrink:0; }
-
-    /* Donation Section */
-    .donation { text-align:center; }
-    .mobile-money { background:#e6fffa; padding:20px; border-radius:10px; margin-top:20px; }
-    .contact input, .contact textarea {
-      width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px;
-    }
-    .contact button {
-      background:#2f855a; color:white; padding:10px 20px; border:none; border-radius:5px;
-      cursor:pointer;
-    }
-    footer { background:#2f855a; color:white; text-align:center; padding:15px; margin-top:30px; }
-  </style>
-
+  <link rel="icon" href="logo.png">
+  
   <!-- PayPal SDK -->
   <script 
     src="https://www.paypal.com/sdk/js?client-id=BAAijDf_gFdx6spgZNWPssuaSaAaduE15jIqwVUdyVNOG1tuqcDPEWl-pSBlDk5tkZEr8uvMOtNVGR1-gY&components=hosted-buttons&disable-funding=venmo&currency=USD">
   </script>
 
   <!-- Google Translate -->
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script>
+  <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage:'en', includedLanguages:'en,fr,de,zh-CN'}, 'google_translate_element');
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
     }
   </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f7fafc; color: #2d3748; }
+    header { background: #22543d; color: white; padding: 20px 0; text-align: center; }
+    header img { height: 80px; }
+    nav { background: #2f855a; text-align: center; padding: 10px; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .hero { position: relative; text-align: center; }
+    .hero img { width: 100%; height: auto; }
+    .hero h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; }
+    section { max-width: 1000px; margin: auto; padding: 30px 15px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    h2 { color: #22543d; }
+    .donate-options img { max-height: 180px; margin: 10px; }
+    .story-gallery img { width: 30%; margin: 1%; border-radius: 10px; }
+    footer { background: #2f855a; color: white; text-align: center; padding: 15px; margin-top: 20px; }
+    .donate-btn { background: #ffcc00; color: #000; padding: 12px 25px; border-radius: 8px; font-weight: bold; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1);} 100% {transform: scale(1);} }
+  </style>
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="Resilient North Uganda Logo" />
+    <h1>Resilient North Uganda</h1>
+    <p>Rooted in Resilience. Growing for the Future</p>
+    <div id="google_translate_element"></div>
+  </header>
 
-<header>
-  <img src="logo.png" alt="Resilient North Uganda Logo"/>
-  <h1>Resilient North Uganda</h1>
-  <p>Rooted in Resilience, Growing for the Future</p>
-  <div id="google_translate_element"></div>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#vision">Vision & Mission</a>
-  <a href="#donate">Donate</a>
-  <a href="#stories">Impact Stories</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section class="hero">
-  <h1>Empowering Northern Uganda</h1>
-  <p>Climate-resilient agriculture, rural livelihoods & community savings</p>
-  <a href="#donate" class="btn-donate">Donate Now</a>
-</section>
-
-<section id="vision">
-  <h2>Our Vision</h2>
-  <p>A hunger-free, self-reliant Northern Uganda where communities thrive despite climate and economic challenges.</p>
-  <h2>Our Mission</h2>
-  <p>To empower rural communities in Northern Uganda through sustainable agriculture, inclusive livelihoods, and financial resilience.</p>
-</section>
-
-<section id="donate" class="donation">
-  <h2>Support Our Work</h2>
-  <p>Support climate-resilient agriculture, rural livelihoods, and community empowerment in Northern Uganda.</p>
-
-  <!-- PayPal Donate Button -->
-  <div id="paypal-container-MFXMSEXWXJG8J"></div>
-  <script>
-    paypal.HostedButtons({ hostedButtonId: "MFXMSEXWXJG8J" })
-      .render("#paypal-container-MFXMSEXWXJG8J");
-  </script>
-
-  <!-- Mobile Money -->
-  <div class="mobile-money">
-    <h3>Donate via Mobile Money</h3>
-    <p>MTN/Airtel Uganda: <strong>+256 763 916 330</strong></p>
+  <div class="hero">
+    <img src="hero.jpg" alt="Hero Banner" />
+    <h1>Together for a Hunger-Free, Self-Reliant Northern Uganda</h1>
   </div>
-</section>
 
-<section id="stories">
-  <h2>Impact Stories & Gallery</h2>
-  <div class="gallery">
-    <img src="story1.jpg" alt="Farmers training"/>
-    <img src="story2.jpg" alt="Village savings group"/>
-    <img src="story3.jpg" alt="Youth piggery project"/>
-  </div>
-</section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#vision">Vision & Mission</a>
+    <a href="#donate">Donate</a>
+    <a href="#stories">Impact Stories</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:resilientnorthuganda@gmail.com">resilientnorthuganda@gmail.com</a></p>
-  <p>Phone: +256 763 916 330</p>
-  <!-- Google Form for automatic receipt -->
-  <form action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" target="_blank">
-    <input type="text" name="entry.123456789" placeholder="Your Name" required>
-    <input type="email" name="entry.987654321" placeholder="Your Email" required>
-    <textarea name="entry.112233445" rows="4" placeholder="Message / Donation Details"></textarea>
-    <button type="submit">Send & Get Receipt</button>
-  </form>
-</section>
+  <section id="about">
+    <h2>About Our NGO</h2>
+    <p>We empower rural communities in Northern Uganda through climate-resilient agriculture, inclusive livelihoods, and financial resilience.</p>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Resilient North Uganda. All rights reserved.</p>
-</footer>
+  <section id="vision">
+    <h2>Our Vision</h2>
+    <p>A hunger-free, self-reliant Northern Uganda where communities thrive despite climate and economic challenges.</p>
+    <h2>Our Mission</h2>
+    <p>To empower rural communities in Northern Uganda through sustainable agriculture, inclusive livelihoods, and financial resilience.</p>
+  </section>
 
+  <section id="donate">
+    <h2>Donate Now</h2>
+    <p>Support climate-resilient agriculture, rural livelihoods, and community empowerment in Northern Uganda.</p>
+    <div class="donate-options">
+      <h3>PayPal</h3>
+      <div id="paypal-container-MFXMSEXWXJG8J"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "MFXMSEXWXJG8J",
+        }).render("#paypal-container-MFXMSEXWXJG8J")
+      </script>
+
+      <h3>Mobile Money</h3>
+      <p>Send to: <strong>+256 763 916 330</strong></p>
+
+      <h3>WeChat Pay</h3>
+      <img src="wechat.png" alt="WeChat QR Code for Donations">
+    </div>
+  </section>
+
+  <section id="stories">
+    <h2>Impact Stories</h2>
+    <div class="story-gallery">
+      <img src="story1.jpg" alt="Dry Farm">
+      <img src="story2.jpg" alt="Irrigated Farm">
+      <img src="story3.jpg" alt="Community Effort">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:resilientnorthuganda@gmail.com">resilientnorthuganda@gmail.com</a></p>
+    <p>Phone: +256 763 916 330</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Resilient North Uganda. All rights reserved.</p>
+  </footer>
 </body>
 </html>
