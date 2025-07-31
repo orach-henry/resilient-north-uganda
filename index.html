@@ -80,11 +80,22 @@
       text-align: center;
       padding: 15px;
     }
-    .donation-options {
-      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px;
+    .donate-btn {
+      background: #ff6b35;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+      margin-top: 20px;
     }
-    .donation-options div { text-align: center; }
-    .donation-options img { width: 150px; margin-top: 10px; }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -94,6 +105,25 @@
     .gallery img {
       width: 100%;
       border-radius: 8px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .submit-btn {
+      background: #2f855a;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -136,6 +166,11 @@
     <h2>Support Resilient North Uganda</h2>
     <p>Your donation helps empower rural communities with climate-resilient agriculture and sustainable livelihoods.</p>
 
+    <!-- Animated Donate Button -->
+    <button class="donate-btn" onclick="document.getElementById('paypal-container-MFXMSEXWXJG8J').scrollIntoView({behavior:'smooth'})">
+      💚 Donate Now
+    </button>
+
     <!-- PayPal Hosted Button -->
     <div id="paypal-container-MFXMSEXWXJG8J" style="margin:20px auto;"></div>
     <script>
@@ -144,21 +179,8 @@
       }).render("#paypal-container-MFXMSEXWXJG8J");
     </script>
 
-    <!-- QR Codes -->
-    <div class="donation-options">
-      <div>
-        <h3>PayPal QR</h3>
-        <img src="paypal-qr.png" alt="PayPal QR">
-      </div>
-      <div>
-        <h3>Mobile Money</h3>
-        <p>MTN / Airtel: <strong>+256 763 916 330</strong></p>
-      </div>
-      <div>
-        <h3>WeChat Pay</h3>
-        <img src="wechat.png" alt="WeChat QR">
-      </div>
-    </div>
+    <!-- Mobile Money (number only) -->
+    <p style="margin-top:15px;">Or donate via Mobile Money: <strong>+256 763 916 330</strong></p>
   </section>
 
   <section id="impact">
@@ -173,9 +195,17 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
+    <h2>Contact Us & Thank Donors</h2>
     <p>Email: <a href="mailto:resilientnorthuganda@gmail.com">resilientnorthuganda@gmail.com</a></p>
     <p>Phone: +256 763 916 330</p>
+
+    <!-- Google Form for Thank-You Email -->
+    <form action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" method="POST" target="_blank">
+      <input type="text" name="entry.1234567890" placeholder="Your Name" required>
+      <input type="email" name="entry.9876543210" placeholder="Your Email" required>
+      <textarea name="entry.1122334455" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Send & Receive Thank-You Email</button>
+    </form>
   </section>
 
   <footer>
