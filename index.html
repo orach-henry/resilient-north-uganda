@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- PayPal Hosted Buttons -->
+  <!-- PayPal Hosted Buttons SDK -->
   <script 
     src="https://www.paypal.com/sdk/js?client-id=BAAijDf_gFdx6spgZNWPssuaSaAaduE15jIqwVUdyVNOG1tuqcDPEWl-pSBlDk5tkZEr8uvMOtNVGR1-gY&components=hosted-buttons&disable-funding=venmo&currency=USD">
   </script>
@@ -25,71 +25,40 @@
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7fafc;
-      color: #2d3748;
+      margin: 0; padding: 0;
+      background: #f7fafc; color: #2d3748;
     }
     header {
-      background: #22543d;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
+      background: #22543d; color: white;
+      text-align: center; padding: 20px 0;
     }
     header img { height: 80px; }
     nav {
-      background: #2f855a;
-      text-align: center;
-      padding: 10px;
+      background: #2f855a; text-align: center; padding: 10px;
     }
-    nav a {
-      color: white; margin: 0 15px; text-decoration: none; font-weight: bold;
-    }
-    .hero {
-      position: relative;
-      text-align: center;
-    }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .hero { position: relative; text-align: center; }
     .hero img {
-      width: 100%;
-      height: auto;
-      max-height: 450px;
-      object-fit: cover;
+      width: 100%; max-height: 450px; object-fit: cover;
     }
     .hero h1 {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      font-size: 2rem;
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.5); color: white; padding: 20px;
+      border-radius: 10px; font-size: 2rem;
     }
     section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
+      max-width: 1000px; margin: 40px auto; padding: 20px;
+      background: white; border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h2 { color: #22543d; }
     footer {
-      background: #2f855a;
-      color: white;
-      text-align: center;
-      padding: 15px;
+      background: #2f855a; color: white; text-align: center; padding: 15px;
     }
     .donate-btn {
-      background: #ff6b35;
-      color: white;
-      font-size: 1.2rem;
-      padding: 15px 40px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-      margin-top: 20px;
+      background: #ff6b35; color: white; font-size: 1.2rem;
+      padding: 15px 40px; border: none; border-radius: 50px; cursor: pointer;
+      animation: pulse 2s infinite; margin-top: 20px;
     }
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -97,34 +66,14 @@
       100% { transform: scale(1); }
     }
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;
     }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
+    .gallery img { width: 100%; border-radius: 8px; }
+    .qr-codes {
+      display: flex; justify-content: center; gap: 40px; margin-top: 20px; flex-wrap: wrap;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 400px;
-      margin: 20px auto;
-    }
-    input, textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    .submit-btn {
-      background: #2f855a;
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-    }
+    .qr-codes div { text-align: center; }
+    .qr-codes img { width: 150px; border-radius: 10px; }
   </style>
 </head>
 <body>
@@ -181,12 +130,24 @@
 
     <!-- Mobile Money (number only) -->
     <p style="margin-top:15px;">Or donate via Mobile Money: <strong>+256 763 916 330</strong></p>
+
+    <!-- QR Codes for PayPal and WeChat -->
+    <div class="qr-codes">
+      <div>
+        <p>PayPal QR</p>
+        <img src="paypal-qr.png" alt="PayPal QR Code">
+      </div>
+      <div>
+        <p>WeChat Pay</p>
+        <img src="wechat-qr.png" alt="WeChat Pay QR">
+      </div>
+    </div>
   </section>
 
   <section id="impact">
     <h2>Impact Stories & Photo Gallery</h2>
     <div class="gallery">
-      <img src="story1.jpg" alt="Story 1">
+            <img src="story1.jpg" alt="Story 1">
       <img src="story2.jpg" alt="Story 2">
       <img src="story3.jpg" alt="Story 3">
       <img src="f5981f3f-3af0-4306-9073-e458158c6615.png" alt="Story 4">
@@ -195,17 +156,9 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us & Thank Donors</h2>
+    <h2>Contact Us</h2>
     <p>Email: <a href="mailto:resilientnorthuganda@gmail.com">resilientnorthuganda@gmail.com</a></p>
     <p>Phone: +256 763 916 330</p>
-
-    <!-- Google Form for Thank-You Email -->
-    <form action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" method="POST" target="_blank">
-      <input type="text" name="entry.1234567890" placeholder="Your Name" required>
-      <input type="email" name="entry.9876543210" placeholder="Your Email" required>
-      <textarea name="entry.1122334455" placeholder="Your Message" required></textarea>
-      <button type="submit" class="submit-btn">Send & Receive Thank-You Email</button>
-    </form>
   </section>
 
   <footer>
@@ -213,5 +166,4 @@
   </footer>
 </body>
 </html>
-
 
