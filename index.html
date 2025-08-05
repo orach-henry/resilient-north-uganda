@@ -74,9 +74,61 @@
     }
     .qr-codes div { text-align: center; }
     .qr-codes img { width: 150px; border-radius: 10px; }
+
+    /* Registration Badge */
+    .reg-badge {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 180px;
+      opacity: 0.95;
+      animation: pulseBadge 2.5s infinite;
+    }
+    .reg-badge img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    @keyframes pulseBadge {
+      0% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Registration Badge -->
+  <div class="reg-badge">
+    <img src="registration-badge.png" alt="Registration in Progress Badge">
+  </div>
 
   <header>
     <img src="logo.png" alt="Resilient North Uganda Logo">
@@ -120,6 +172,11 @@
       💚 Donate Now
     </button>
 
+    <!-- Donor Disclaimer -->
+    <p style="margin-top:10px; font-size:0.9rem; color:#555; max-width:600px; margin-left:auto; margin-right:auto;">
+      <em>Resilient North Uganda is currently completing its formal registration. All donations are used solely for community projects and will be receipted once registration is finalized.</em>
+    </p>
+
     <!-- PayPal Hosted Button -->
     <div id="paypal-container-MFXMSEXWXJG8J" style="margin:20px auto;"></div>
     <script>
@@ -147,7 +204,7 @@
   <section id="impact">
     <h2>Impact Stories & Photo Gallery</h2>
     <div class="gallery">
-            <img src="story1.jpg" alt="Story 1">
+      <img src="story1.jpg" alt="Story 1">
       <img src="story2.jpg" alt="Story 2">
       <img src="story3.jpg" alt="Story 3">
       <img src="f5981f3f-3af0-4306-9073-e458158c6615.png" alt="Story 4">
@@ -164,6 +221,14 @@
   <footer>
     <p>&copy; 2025 Resilient North Uganda. All rights reserved.</p>
   </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/256763916330" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
 </body>
 </html>
+
+
 
