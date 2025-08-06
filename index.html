@@ -99,27 +99,20 @@
     /* Floating WhatsApp Button */
     .whatsapp-float {
       position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
       width: 60px;
       height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.3s;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
     }
     .whatsapp-float img {
-      width: 35px;
-      height: 35px;
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+    .whatsapp-float img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -172,11 +165,6 @@
       💚 Donate Now
     </button>
 
-    <!-- Donor Disclaimer -->
-    <p style="margin-top:10px; font-size:0.9rem; color:#555; max-width:600px; margin-left:auto; margin-right:auto;">
-      <em>Resilient North Uganda is currently completing its formal registration. All donations are used solely for community projects and will be receipted once registration is finalized.</em>
-    </p>
-
     <!-- PayPal Hosted Button -->
     <div id="paypal-container-MFXMSEXWXJG8J" style="margin:20px auto;"></div>
     <script>
@@ -184,6 +172,12 @@
         hostedButtonId: "MFXMSEXWXJG8J",
       }).render("#paypal-container-MFXMSEXWXJG8J");
     </script>
+
+    <!-- Donation Disclaimer -->
+    <p style="margin-top:10px; font-size:0.9rem; color:#555;">
+      <em>Resilient North Uganda is currently completing its formal registration. 
+      All donations are used solely for community projects and will be receipted once registration is finalized.</em>
+    </p>
 
     <!-- Mobile Money (number only) -->
     <p style="margin-top:15px;">Or donate via Mobile Money: <strong>+256 763 916 330</strong></p>
@@ -218,17 +212,34 @@
     <p>Phone: +256 763 916 330</p>
   </section>
 
+  <!-- WhatsApp QR Contact -->
+  <section id="whatsapp">
+    <h2>Connect with Us on WhatsApp</h2>
+    <p>Scan the QR code below to connect with <strong>Resilient North UG/NGO</strong> directly on WhatsApp.</p>
+    <div style="text-align:center; margin-top:15px;">
+      <img src="whatsapp-qr.jpg" alt="WhatsApp QR Code" style="width:200px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+      <p style="margin-top:10px; font-weight:bold; color:#2f855a;">
+        Or click here: 
+        <a href="https://wa.me/256763916330" target="_blank" style="color:#ff6b35; text-decoration:none;">
+          Chat with Us on WhatsApp
+        </a>
+      </p>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Resilient North Uganda. All rights reserved.</p>
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/256763916330" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <a href="https://wa.me/256763916330" target="_blank" class="whatsapp-float">
+    <img src="whatsapp-qr.jpg" alt="WhatsApp Contact" />
   </a>
 
 </body>
 </html>
+
+
 
 
 
